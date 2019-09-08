@@ -1,4 +1,4 @@
-# Inspiiired
+# INSPIIIRED
 
 This repo is all about giving inspiration & ideas for your next project.
 
