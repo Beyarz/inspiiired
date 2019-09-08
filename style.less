@@ -1,9 +1,10 @@
 // Less is more
 
-@black: rgba(0, 0, 0);
-@white25: rgba(255, 255, 255, 0.25);
-@splitterFontsize: 4rem;
 @zindexSize: 31;
+@black: rgba(0, 0, 0);
+@border: 3px solid @black;
+@splitterFontsize: 4rem;
+@white25: rgba(255, 255, 255, 0.25);
 
 * {
   margin: 0%;
@@ -34,7 +35,7 @@ body {
 
 .navbar {
   padding: 1rem;
-  border-bottom: 3px solid @black;
+  border-bottom: @border;
 }
 
 .highestZIndex {
@@ -42,7 +43,7 @@ body {
 }
 
 #nav-footer {
-  border-top: 3px solid @black;
+  border-top: @border;
 }
 
 #splitter {
