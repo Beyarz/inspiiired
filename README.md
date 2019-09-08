@@ -1,4 +1,4 @@
-# INSPIIIRED
+# [INSPIIIRED](https://beyarz.github.io/inspiiired)
 
 This repo is all about giving inspiration & ideas for your next project.
 
