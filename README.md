@@ -1,1 +1,1 @@
-# inspiiired
+# Inspiiired
