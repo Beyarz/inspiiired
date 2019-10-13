@@ -18,7 +18,7 @@ prepend('nav-footer', '
       <nav class="breadcrumb">
         <ul style="padding-top:2rem;">
           <li class="is-active heading"><a href="https://github.com/Beyarz/inspiiired">Github</a></li>
-          <li class="heading"><a href="https://github.com/Beyarz/inspiiired">Beyarz</a"></li>
+          <li class="heading"><a href="https://github.com/Beyarz/inspiiired">Beyar</a"></li>
         </ul>
       </nav>
     </div>
