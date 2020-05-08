@@ -61,7 +61,6 @@ assembleHex = ->
 
   for x in [1..randLength]
     hexValue = hex.create()
-
     if hexValue > 9
       hexString += hexArray[hexValue - 10]
     else
@@ -111,14 +110,16 @@ injectNewBackground = ->
   # Do not let the user trigger newBackground() if the popup is displayed
   if allowRegeneration == 0 then allowRegeneration = 1 else allowRegeneration = 0
 
-displayGuide = ->
-  presentColor('from', 'Hit space')
-  presentColor('to', 'to generate a new color')
-
-injectNewBackground()
-displayGuide()
-
 document.onkeydown = (key) ->
   if key.keyCode == SPACEBAR && allowRegeneration == 1
     injectNewBackground()
     allowCopy('copyArea')
+
+document.getElementById('previewArea').onclick = ->
+  if allowRegeneration == 1
+    injectNewBackground()
+    allowCopy('copyArea')
+
+injectNewBackground()
+presentColor('from', 'Hit space or click')
+presentColor('to', 'to generate a new color')
