@@ -75,7 +75,7 @@ injectNewBackground = ->
   currentStyle = "linear-gradient(#{int.create()}deg, #{_from}, #{_to})"
   app.style.background = currentStyle
 
-window.togglePopup = ->
+@togglePopup = ->
   document.getElementById('popup').classList.toggle 'is-active'
   presentColor('popupContent', "background: #{currentStyle};")
   document.getElementById('copyColorValue').setAttribute 'data-clipboard-text', "background: #{currentStyle};"

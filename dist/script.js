@@ -97,7 +97,7 @@
     return app.style.background = currentStyle;
   };
 
-  window.togglePopup = function () {
+  this.togglePopup = function () {
     document.getElementById('popup').classList.toggle('is-active');
     presentColor('popupContent', `background: ${currentStyle};`);
     document.getElementById('copyColorValue').setAttribute('data-clipboard-text', `background: ${currentStyle};`); // Do not let the user trigger newBackground() if the popup is displayed
