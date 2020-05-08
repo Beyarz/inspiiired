@@ -26,8 +26,10 @@
   generateColumn = function (color) {
     var column;
     column = document.createElement('div');
-    column.className = 'column';
+    column.className = 'column button is-small';
+    column.setAttribute('onclick', `revertSuggestion(\`${color}\`)`);
     column.style.background = color;
+    column.style.border = 'none';
     return column;
   };
 
@@ -95,6 +97,20 @@
     appendHistory(previousStyle);
     currentStyle = `linear-gradient(${int.create()}deg, ${_from}, ${_to})`;
     return app.style.background = currentStyle;
+  };
+
+  this.revertSuggestion = function (background) {
+    var _from, _to, parsedBackground;
+
+    currentStyle = background;
+    parsedBackground = background.replace('linear-gradient', '').replace(/\(|\)/g, '').split(',');
+    _from = parsedBackground[1];
+    _to = parsedBackground[2];
+    presentColor('from', _from);
+    presentColor('to', _to);
+    presentColor('popupContent', `background: ${currentStyle};`);
+    app.style.background = currentStyle;
+    return document.getElementById('copyColorValue').setAttribute('data-clipboard-text', `background: ${currentStyle};`);
   };
 
   this.togglePopup = function () {

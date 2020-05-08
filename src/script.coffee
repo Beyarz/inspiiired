@@ -20,8 +20,10 @@ previousStyle = null
 
 generateColumn = (color) ->
   column = document.createElement('div')
-  column.className = 'column'
+  column.className = 'column button is-small'
+  column.setAttribute 'onclick', "revertSuggestion(`#{color}`)"
   column.style.background = color
+  column.style.border = 'none'
   return column
 
 injectColumn = (object) ->
@@ -74,6 +76,19 @@ injectNewBackground = ->
 
   currentStyle = "linear-gradient(#{int.create()}deg, #{_from}, #{_to})"
   app.style.background = currentStyle
+
+@revertSuggestion = (background) ->
+  currentStyle = background
+  parsedBackground = background.replace('linear-gradient', '').replace(/\(|\)/g, '').split(',')
+  _from = parsedBackground[1]
+  _to = parsedBackground[2]
+
+  presentColor('from', _from)
+  presentColor('to', _to)
+  presentColor('popupContent', "background: #{currentStyle};")
+
+  app.style.background = currentStyle
+  document.getElementById('copyColorValue').setAttribute 'data-clipboard-text', "background: #{currentStyle};"
 
 @togglePopup = ->
   document.getElementById('popup').classList.toggle 'is-active'
