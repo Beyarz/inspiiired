@@ -10,8 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "css": "lessc --source-map-inline --verbose ./src/style.less ./dist/style.css",
-    "js": "coffee --output ./dist/ -t -m -c ./src/*.coffee"
+    "css": "lessc --source-map-inline --verbose ./src/style.less ./docs/style.css",
+    "js": "coffee --output ./docs/ -t -m -c ./src/*.coffee"
   },
   "repository": {
     "type": "git",
