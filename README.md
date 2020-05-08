@@ -1,6 +1,6 @@
-# [INSPIIIRED](https://beyarz.github.io/inspiiired)
+# INSPIIIRED
 
-This repo is all about giving inspiration & ideas for your next project.
+This project is all about giving inspiration & ideas for which color to pick.
 
 Picking the right color combination can be hard sometimes.<br>
 By trying different combinations have helped me pick the right one countless times.<br>
@@ -14,6 +14,17 @@ If you think you've found the right combination, all you have to do next<br>
 is to click on the color code and then hit the copy button.<br>
 That's it!
 
-## Contributing
+## Getting started
 
-See [Contribution.md](Contribution.md)
+- Clone the [repo](https://github.com/Beyarz/inspiiired.git)
+- `npm install`
+
+## Transpile
+
+- `npm run js`
+- `npm run css`
+
+## Requirements
+
+- Web browser
+- [Node](https://nodejs.org/en/)

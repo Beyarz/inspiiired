@@ -9,6 +9,7 @@ history = document.getElementById 'history-previewer'
 SPACEBAR = 32
 allowRegeneration = 1
 maxColumnLimit = 4
+firstNode = 0
 
 int = new Random 100
 hex = new Random 16
@@ -27,7 +28,7 @@ injectColumn = (object) ->
   history.appendChild(object)
   if (history.childElementCount > maxColumnLimit)
     history
-      .childNodes[0]
+      .childNodes[firstNode]
       .remove()
 
 appendHistory = (color) ->
@@ -51,6 +52,7 @@ assembleHex = ->
     hexValue = hex.create()
     if hexValue > 9 then hexString += hexArray[hexValue - 10]
     else hexString += hexValue
+
   return hexString
 
 presentColor = (id, color) ->
@@ -73,7 +75,6 @@ injectNewBackground = ->
   currentStyle = "linear-gradient(#{int.create()}deg, #{_from}, #{_to})"
   app.style.background = currentStyle
 
-# Window adds to global scope
 window.togglePopup = ->
   document.getElementById('popup').classList.toggle 'is-active'
   presentColor('popupContent', "background: #{currentStyle};")
