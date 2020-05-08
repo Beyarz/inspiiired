@@ -1,0 +1,26 @@
+{
+  "name": "inspiiired",
+  "version": "1.0.0",
+  "description": "Minimalistic gradient generator",
+  "main": "script.js",
+  "dependencies": {
+    "@babel/core": "^7.9.6",
+    "coffeescript": "^2.5.1",
+    "less": "^3.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "css": "lessc --source-map-inline --verbose ./src/style.less ./dist/style.css",
+    "js": "coffee --output ./dist/ -t -M -c ./src/*.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beyarz/inspiiired.git"
+  },
+  "author": "Beyarz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beyarz/inspiiired/issues"
+  },
+  "homepage": "https://github.com/Beyarz/inspiiired#readme"
+}

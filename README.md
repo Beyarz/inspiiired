@@ -13,3 +13,7 @@ The rest is done for you.
 If you think you've found the right combination, all you have to do next<br>
 is to click on the color code and then hit the copy button.<br>
 That's it!
+
+## Contributing
+
+See [Contribution.md](Contribution.md)
