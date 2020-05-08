@@ -10,6 +10,7 @@ SPACEBAR = 32
 allowRegeneration = 1
 maxColumnLimit = 4
 firstNode = 0
+revertedOnce = 0
 
 int = new Random 100
 hex = new Random 16
@@ -35,11 +36,13 @@ injectColumn = (object) ->
 
 appendHistory = (color) ->
   # Ignore empty generated column during initial start
-  if (color == null)
+  # & excluse listing previous suggestions
+  if (color == null || revertedOnce == 1)
+    revertedOnce = 0
     return false
-
-  newColumn = generateColumn(color)
-  injectColumn(newColumn)
+  else
+    newColumn = generateColumn(color)
+    injectColumn(newColumn)
 
 assembleHex = ->
   if hexLength.create() == 0
@@ -89,6 +92,7 @@ injectNewBackground = ->
 
   app.style.background = currentStyle
   document.getElementById('copyColorValue').setAttribute 'data-clipboard-text', "background: #{currentStyle};"
+  revertedOnce = 1
 
 @togglePopup = ->
   document.getElementById('popup').classList.toggle 'is-active'
