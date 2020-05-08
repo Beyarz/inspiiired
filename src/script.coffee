@@ -6,7 +6,9 @@ class Random
 app = document.getElementById 'app'
 history = document.getElementById 'history-previewer'
 
-SPACEBAR = 32
+space = " "
+SPACEBAR = space.charCodeAt()
+
 allowRegeneration = 1
 maxColumnLimit = 4
 firstNode = 0
@@ -21,14 +23,18 @@ previousStyle = null
 
 generateColumn = (color) ->
   column = document.createElement('div')
+
   column.className = 'column button is-small'
   column.setAttribute 'onclick', "revertSuggestion(`#{color}`)"
+
   column.style.background = color
   column.style.border = 'none'
+
   return column
 
 injectColumn = (object) ->
   history.appendChild(object)
+
   if (history.childElementCount > maxColumnLimit)
     history
       .childNodes[firstNode]
@@ -37,7 +43,7 @@ injectColumn = (object) ->
 appendHistory = (color) ->
   # Ignore empty generated column during initial start
   # & excluse listing previous suggestions
-  if (color == null || revertedOnce == 1)
+  if color == null || revertedOnce == 1
     revertedOnce = 0
     return false
   else
@@ -55,8 +61,11 @@ assembleHex = ->
 
   for x in [1..randLength]
     hexValue = hex.create()
-    if hexValue > 9 then hexString += hexArray[hexValue - 10]
-    else hexString += hexValue
+
+    if hexValue > 9
+      hexString += hexArray[hexValue - 10]
+    else
+      hexString += hexValue
 
   return hexString
 
