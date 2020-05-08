@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Inspiiired</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <!-- Little design is good design -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="nav-top"></div>
+
+  <div class="modal modal-background highestZIndex" id="popup">
+    <div class="modal-content highestZIndex">
+      <div class="columns">
+        <div class="column">
+          <pre class="has-text-centered" id="popupContent"></pre>
+        </div>
+        <div class="column">
+          <button class="button is-pulled-right is-dark" id="copyColorValue" onclick="togglePopup()">Copy &
+            close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="app">
+    <div class="container has-text-centered representation">
+      <span id="copyArea">
+        <span id="from"></span>
+        <span id="splitter">|</span>
+        <span id="to"></span>
+      </span>
+    </div>
+  </div>
+
+  <div id="nav-footer"></div>
+  <script src="signature.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script>
+    new ClipboardJS(".button");
+  </script>
+</body>
+
+</html>

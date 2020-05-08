@@ -2,7 +2,7 @@
 # Edit at https://www.gitignore.io/?templates=node,macos,coffeescript,visualstudiocode
 
 ### CoffeeScript ###
-*.js
+# *.js
 
 ### macOS ###
 # General
@@ -111,7 +111,7 @@ typings/
 .nuxt
 
 # rollup.js default build output
-dist/
+# dist/
 
 # Uncomment the public line if your project uses Gatsby
 # https://nextjs.org/blog/next-9-1#public-directory-support

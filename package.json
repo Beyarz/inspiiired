@@ -11,7 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "css": "lessc --source-map-inline --verbose ./src/style.less ./dist/style.css",
-    "js": "coffee --output ./dist/ -t -M -c ./src/*.coffee"
+    "js": "coffee --output ./dist/ -t -m -c ./src/*.coffee"
   },
   "repository": {
     "type": "git",
