@@ -13,7 +13,16 @@
 </head>
 
 <body>
-  <div id="nav-top"></div>
+  <div id="nav-top">
+    <nav class="level navbar">
+      <div class="level-item has-text-centered">
+        <div>
+        <p class="heading left-space">Welcome to</p>
+        <p id="main-title" class="left-space">INSPIIIRED</p>
+        </div>
+      </div>
+    </nav>
+  </div>
 
   <div class="modal modal-background highestZIndex" id="popup">
     <div class="modal-content highestZIndex">
@@ -42,9 +51,25 @@
     </div>
   </div>
 
-  <div id="nav-footer"></div>
-  <script src="signature.js"></script>
-  <script src="script.js"></script>
+  <div id="nav-footer">
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <nav class="breadcrumb">
+          <ul style="padding-top:2rem;">
+            <li class="is-active heading">
+              <a href="https://github.com/Beyarz/inspiiired">Github</a>
+            </li>
+
+            <li class="heading">
+              <a href="https://github.com/Beyarz/inspiiired">Beyar</a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+  </div>
+
+  <script async src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
   <script>
     new ClipboardJS(".button");
