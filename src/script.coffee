@@ -1,7 +1,6 @@
 class Random
   constructor: (@max) ->
-  create: ->
-    Math.floor(Math.random() * @max)
+  create: Math.floor(Math.random() * @max)
 
 app = document.getElementById 'app'
 history = document.getElementById 'history-previewer'
@@ -42,7 +41,7 @@ injectColumn = (object) ->
 
 appendHistory = (color) ->
   # Ignore empty generated column during initial start
-  # & excluse listing previous suggestions
+  # & exclude listing previous suggestions
   if color == null || revertedOnce == 1
     revertedOnce = 0
     return false
