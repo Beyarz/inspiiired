@@ -7,7 +7,7 @@
     "@babel/core": "^7.10.3",
     "coffeescript": "^2.5.1",
     "less": "^3.11.3",
-    "snyk": "^1.349.0"
+    "snyk": "^1.352.1"
   },
   "devDependencies": {},
   "scripts": {
