@@ -4,7 +4,7 @@
   "description": "Minimalistic gradient generator",
   "main": "script.js",
   "dependencies": {
-    "@babel/core": "^7.10.3",
+    "@babel/core": "^7.10.4",
     "coffeescript": "^2.5.1",
     "less": "^3.11.3",
     "snyk": "^1.349.0"
